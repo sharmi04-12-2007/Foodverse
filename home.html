@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodVerse - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     
+    <nav class="navbar">
+        <div class="logo">🍴 FoodVerse</div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="#restaurants">Restaurants</a>
+            <a href="#about">About</a>
+        </div>
+        <div class="cart" onclick="openCart()">
+            🛒 Cart
+        </div>
+    </nav>
+   
+    <section class="hero">
+        <div class="hero-content">
+            <p>WELCOME TO FOODVERSE</p>
+            <h1>A Universe of <span>Flavours</span></h1>
+            <p>Delicious food from your favourite restaurants,
+                delivered to your doorstep.</p>
+            <div class="search-box">
+                <input type="text"
+                       id="searchInput"
+                       placeholder="Search for food...">
+                <button onclick="searchFood()">🔍 Search</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="offer">
+        <div>
+            <h2>🎉 Special Offer</h2>
+            <p>Get 20% OFF on your first order!</p>
+        </div>
+        <button onclick="showOffer()">Order Now</button>
+    </section>
+     
+    <section class="section">
+        <h2>Explore Categories</h2>
+        <div class="categories">
+            <div class="category"
+                 onclick="openCategory('South Indian')">
+                <div class="category-icon">🍛</div>
+                <h3>South Indian</h3>
+                <p>Traditional favourites</p>
+            </div>
+            <div class="category"
+                 onclick="openCategory('Non-Veg')">
+                <div class="category-icon">🍗</div>
+                <h3>Non-Veg</h3>
+                <p>Chicken, mutton & fish</p>
+            </div>
+            <div class="category"
+                 onclick="openCategory('Mandi')">
+                <div class="category-icon">🍖</div>
+                <h3>Mandi</h3>
+                <p>Rich & delicious mandi</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <h2>🔥 Popular Food</h2>
+        <div class="food-grid">
+            <div class="food-card">
+                <img src="images/Chicken biriyani.jpg">
+                <h3>Chicken Biryani</h3>
+                <p>⭐ 4.5</p>
+                <h4>₹180</h4>
+                <button onclick="addToCart('Chicken Biryani',180)">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="food-card">
+                <img src="images/dosa.jpg">
+                <h3>Dosa</h3>
+                <p>⭐ 4.6</p>
+                <h4>₹70</h4>
+                <button onclick="addToCart('Dosa',70)">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="food-card">
+                <img src="images/chicken mandi.jpg">
+                <h3>Chicken Mandi</h3>
+                <p>⭐ 4.7</p>
+                <h4>₹250</h4>
+                <button onclick="addToCart('Chicken Mandi',250)">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="food-card">
+                <img src="images/chicken 65.jpg">
+                <h3>Chicken 65</h3>
+                <p>⭐ 4.5</p>
+                <h4>₹160</h4>
+                <button onclick="addToCart('Chicken 65',160)">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </section>
+   
+    <section class="section" id="restaurants">
+        <h2>🏪 Popular Restaurants</h2>
+        <div class="restaurant-grid">
+            <div class="restaurant-card">
+                <div class="restaurant-icon">🍛</div>
+                <h3>Rasanai</h3>
+                <p>South Indian</p>
+                <span>⭐ 4.6</span>
+                <small> • 25-30 min</small>
+            </div>
+            <div class="restaurant-card">
+                <div class="restaurant-icon">🍗</div>
+                <h3>Dindigul Thalappakatti</h3>
+                <p>Biryani & Non-Veg</p>
+                <span>⭐ 4.6</span>
+                <small> • 30-35 min</small>
+            </div>
+            <div class="restaurant-card">
+                <div class="restaurant-icon">🍖</div>
+                <h3>Persian Qureshi Mandi</h3>
+                <p>Mandi & Arabian</p>
+                <span>⭐ 4.2</span>
+                <small> • 35-40 min</small>
+            </div>
+            <div class="restaurant-card">
+                <div class="restaurant-icon">🍴</div>
+                <h3>Junior Kuppanna</h3>
+                <p>South Indian & Non-Veg</p>
+                <span>⭐ 4.1</span>
+                <small> • 25-30 min</small>
+            </div>
+            <div class="restaurant-card">
+                <div class="restaurant-icon">🍽️</div>
+                <h3>Valarmathi Mess</h3>
+                <p>South Indian Meals</p>
+                <span>⭐ 4.3</span>
+                <small> • 20-25 min</small>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <h2>About FoodVerse</h2>
+        <p>
+            FoodVerse is a simple food delivery platform that connects
+            customers with delicious food from popular restaurants.
+            From traditional South Indian meals to biryani and mandi,
+            everything is just a few clicks away.
+        </p>
+    </section>
+   
+    <footer>
+        <h3>🍴 FoodVerse</h3>
+        <p>A Universe of Flavours</p>
+        <p>📞 Help | 📧 foodverse@gmail.com</p>
+        <p>© 2026 FoodVerse</p>
+    </footer>
+   
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-box">
+            <button class="close-cart" onclick="closeCart()">✕</button>
+            <h2>🛒 Your Cart</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                Total: ₹<span id="cartTotal">0</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">
+                Place Order
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
